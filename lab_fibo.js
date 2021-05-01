@@ -14,4 +14,15 @@ function fibo(num){
     }
 }
 
-console.log(fibo(-1));
+//console.log(fibo(-1));
+//console.log(fibo(6));
+
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+readline.question('Enter the number of the fibonacci sequence that you want: ', num => {
+    console.log(fibo(num));
+    readline.close();
+});
